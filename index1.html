@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<!--
+
+05-06 Imágenes
+
+En esta práctica debes ingresar varias imágenes en una página web y comparar el
+tiempo de carga hasta minimizarlo por completo.
+  1. Utiliza sitios libres de derechos para descargar 12 imágenes con la resolución
+  más alta posible. Incluye formatos JPG, GIF y PNG. 
+  2. Crear una página web para organizar las imágenes usando el modelo flexbox,
+  de modo que quepan dos imágenes por ancho.Obtendrás 6 filas de dos imágenes 
+  por fila. NO CAMBIAR EL TAMAÑO ORIGINAL.
+  3. Agregue etiquetas ALT a todas las imágenes. Respeta el copyleft utilizando
+  las etiquetas apropiadas para dar el crédito necesario al autor de la imagen.
+  4. Crear un proyecto en Github y publicar la página. Siga el siguiente 
+  manual:https://docs.github.com/es/pages/getting-started-with-github-pages/creating-a-github-pages-site
+  5. Usar herramientas de Google (https://pagespeed.web.dev/) para comprobar el tiempo de
+  carga de la página, crear una tabla e indicar el tamaño medio, formato de imagen utilizado y tiempo de carga.Agregue la tabla a la página web.
+
+
+CAPTURA EL PRIMER PANTALLAZO
+
+6. COPIAR LA PÁGINA WEB EN OTRA.Optimiza el tamaño Y EL FORMATO (INVESTIGA SOBRE NUEVOS FORMATOS)
+de las imágenes. Utiliza etiquetas PICTURE, SRCSET y MEDIA para incluir distintos tamaños y 
+formatos de imagen.  Realiza nuevamente la prueba de tiempo de carga y actualiza los datos de la tabla.
+
+7. COPIA LA ÚLTIMA PÁGINA WEB EN OTRA.Ahora seguiremos los consejos de la página de Google.
+en cuanto a formatos.Puedes utilizar la herramienta gráfica que quieras para configurarlos,
+a modo de ejemplo aquí tienes varias: https://www.dosmedia.com/tratamiento-de-imagenes-para-tu-pagina-web/
+
+8. Aplicación de Estilos CSS:
+  a. Usar object-fit y object-position para asegurar que las imágenes se muestren correctamente en su contenedor.
+  b. Implementar srcset y sizes en las imágenes para hacerlas responsivas en diferentes tamaños de pantalla.
+  c. Utilizar la etiqueta <picture> para algunas imágenes, ofreciendo diferentes formatos según el navegador.
+
+9. Efectos Visuales Adicionales:
+  a. Aplicar diferentes filters a algunas imágenes para cambiar su apariencia (por ejemplo, sepia, grayscale).
+  b. Utilizar opacity en algunas imágenes para crear un efecto de transparencia.
+  c. Implementar clip-path en al menos una imagen para darle una forma única.
+  d. Añadir border-image a alguna imagen para mostrar cómo se puede usar una imagen como borde.
+
+10. Responsividad:
+  Asegurarse de que la galería se vea bien en diferentes tamaños de pantalla, incluyendo teléfonos móviles y tablets.
+
+11. Interactividad:
+    Agregar interactividad con JavaScript, cómo cambiar la opacidad o el filtro al pasar el mouse sobre las imágenes.
+
+ENTREGA:  una sóla imagen con DOS capturas de pantalla de Google Insight, una antes de optimizar y otra después
+(junta las dos en una sola) y un  sólo  documento  HTML con el código final.
+
+-->
+
+<html lang="es">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title> Ejercicio 6-1 </title>
+
+      <style>
+        body {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+        }
+
+        div {
+          flex: 0 48%; /* Para que cada div ocupe el 48% del contenedor */
+          margin: 1%;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        figcaption {
+          text-align: center;
+        }
+
+        .copy-left {
+          display: inline-block;
+          text-align: right;
+          margin: 0px;
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+          font-size: 20px;
+        }
+         
+      </style>
+  </head>
+
+  <body>
+    <div>
+      <figure>
+        <img src="img/1.jpg" alt="Machu Picchu (Perú)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/2.jpg" alt="Big Ben (Inglaterra)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/3.jpg" alt="Tesoro de Petra (Jordania)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/4.jpg" alt="Necrópolis de Guiza (Egipto)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/5.jpg" alt="Torre de Pisa (Italia)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/6.jpg" alt="Alhambra (España)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/7.jpg" alt="Mezquita de Koutoubia (Marruecos)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/8.jpg" alt="Gran Muralla China (China)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/9.jpeg" alt="Chichen Itzá (México)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/10.jpg" alt="Torre Eiffel (París)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/11.jpg" alt="Cristo Redentor (Brasil)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <figure>
+        <img src="img/12.jpg" alt="Monte Rushmore (EE.UU.)">
+        <figcaption>CopyLeft <span class="copy-left">©</span> MartaGila</figcaption>
+      </figure>
+    </div>
+
+  </body>
+</html>
